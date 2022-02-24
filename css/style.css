@@ -1,0 +1,132 @@
+body{
+    font-family: 'Poppins', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+  }
+  
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a:visited{
+    color: blue;
+  }
+
+  .card > header{
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+  h4{
+    text-align: center;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+.gallery img{
+  border: slid 10px #50c7c7;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#logo{
+  animation: move 5s ease;
+}
+
+@keyframes move {
+  from {width: 25px; opacity: 0;}
+  to {width: 475px; opacity: 1;}
+}
+
+@media screen and (min-width:900px){
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .card{
+    flex-basis: 250px;
+  }
+
+  body > header{
+    position: sticky;
+    top: 0;
+  }
+
+  .pricing{
+    align-items: center;
+  }
+}
+
+@media screen and (prefers_reduced-motion: reduce){
+  #logo{
+    animation: none;
+  }
+}
+
+@media print{
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: none;
+  }
+
+  nav{
+    width: 100%;
+  }
+
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .pricing{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+  }
+
+  .card{
+    display: flex;
+    border: solid 2px #45ADDD;
+    flex-basis: 325px;
+  }
+
+  h2#gallery, .gallery{
+    display: none;
+  }
+
+  .card li:nth-child(2n)::after{
+    content: '\01F44D';
+  }
+}

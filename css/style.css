@@ -4,23 +4,23 @@ body{
     background-color: #f1f1f1;
   }
   
-  header{
+header{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .nav_links{
+.nav_links{
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  a:visited{
+a:visited{
     color: blue;
   }
 
-  .card > header{
+.card > header{
     background-color: #288088;
     border: solid 2px #45ADAD;
     padding: 20px 0px;
@@ -28,17 +28,27 @@ body{
     border-top-right-radius: 50px;
   }
 
-  h4{
+h4{
     text-align: center;
   }
 
-  .card{
+a.nav_item:visited{
+    color: inherit;
+  }
+
+.card{
     display: flex;
     flex-direction: column;
     flex-basis: 450px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
+
+.pricing{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .gallery img{
   border: slid 10px #50c7c7;
